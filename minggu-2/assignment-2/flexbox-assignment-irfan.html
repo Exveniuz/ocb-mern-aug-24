@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bookshelf</title>
+    <style>
+        :root {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .bigbookshelf {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #2A2C2E;
+            color: #FFFFFF99;
+            padding: 20px 24px;
+            gap: 10px;
+            border-radius: 20px;
+            justify-content: space-between;
+            width: 1200px;
+        }      
+        .logo-container {
+            display: flex; 
+            gap: 25px; 
+            justify-content: space-evenly; 
+            align-items: center;
+        }    
+        .nav-container {
+            display: flex;
+            justify-content: space-evenly; 
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        .banner {
+            color:#F4BA30;
+            display: flex;
+            font-size: xx-large;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #F4CE47;
+            padding: 12px 60px;
+            width: 100%;
+        }
+        .allbooks {
+            display: flex;
+            flex-shrink: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2A2C2E;
+            gap: 10px;
+            width: 100%;
+            padding: 50px;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFFFF;
+            width: 294px;
+            height: 577px;
+            border-radius: 20px;
+            
+        }
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-right: auto;
+            margin-bottom: auto;
+            padding: 0px 24px;
+            font-size: larger;
+        }
+        .comment {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 58px;
+            height: 32px;
+            border: 1px solid #000000DE;
+            background-color: #FFFFFF;
+            border-radius: 31px;
+            padding: 8px 12px;
+            gap: 4px;
+            font-size: small;
+        }
+        #star {
+            width: 96px;
+
+        }  
+        .footer {
+            width: 1248px;
+            top: 2121px;
+            left: 259px;
+            padding: 0px 24px 0px 24px;
+            gap: 0px;
+        }
+        #socials {
+            background: #2A2C2E;
+            height: 88px;
+            display: flex;
+            font-size: small;
+        }
+        #tnc {
+            background: #000000DE;
+            height: 40px;
+            display: flex;
+            font-size: small;
+        }
+        .login {
+            background-color: #F4CE47;
+            color: #2A2C2E;
+            padding: 16px 28px 16px 28px;
+            gap: 10px;
+            border-radius: 16px;
+        }
+        .contact {
+            display: flex; 
+            margin-left: auto; 
+            gap: 10px; 
+            color: #FFFFFF; 
+            align-items: center;
+        }
+        @media (max-width: 600px) {
+            .bigbookshelf {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 450px;
+                gap: 20px;
+            }
+            .nav-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }        
+            .footer {
+                width: 450px;
+                height: 72px;
+            }
+            #tnc {
+              display: flex;  
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+              padding: 10px 24px
+            }
+            .contact {
+            display: flex; 
+            margin-left: 0; 
+            gap: 10px; 
+            color: #FFFFFF; 
+            align-items: center;
+            }
+            .banner {
+                justify-content: center;
+            }
+        }
+    </style>    
+</head>
+<body>
+    <div class="bigbookshelf"> 
+        <div style="display: flex; gap: 10px; align-items: center;"> 
+            <div style="display: flex; align-items: center;"><img src="assets/Logo.png" alt="Logo" height="30px"></div> 
+            <div style="font-weight: bold; display: flex; flex: 1 1 240px;">BIG BOOKSHELF</div> 
+        </div>           
+        <div class="nav-container">
+            <div class="nav" style="color:#F4D867;">Books</div>
+            <div class="nav">Authors</div>
+            <div class="nav">What to Read?</div>
+            <div class="nav">Gift Ideas</div>
+            <div class="nav">About Us</div> 
+        </div>   
+        <div class="logo-container">
+            <div><img src="assets/Search.png" alt="search"></div>
+            <div><img src="assets/bookmark.png" alt="bookmark"></div>
+            <div><img src="assets/Cart.png" alt="cart"></div>
+            <div class="login">LOGIN</div>
+        </div> 
+    </div>
+    <div class="banner">
+        <div class="allbooks"> </div>
+        <div class="allbooks">ALL BOOKS</div>
+        <div class="allbooks">ALL BOOKS</div>
+        <div class="allbooks" style="color: #2A2C2E;">ALL BOOKS</div>
+        <div class="allbooks">ALL BOOKS</div>
+        <div class="allbooks">ALL BOOKS</div>
+        <div class="allbooks"> </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/the-wealth-of-nations.jpg" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Adam Smith</div> 
+                <div style="display: flex; flex-basis: 38.4px;">The Wealth of Nations</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div style="text-decoration: line-through; color: #00000061;">$15.50</div>
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/mater-margarita.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Mikhail Bulgakov</div> 
+                <div style="display: flex; flex-basis: 38.4px;">Mater Margarita</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div style="text-decoration: line-through; color: #00000061;">$15.50</div>
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/from-the-memoirs-of-a-non-enemy-combatant.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Alex Gilvarry</div> 
+                <div style="display: flex; flex-basis: 38.4px;">From the Memoirs of a Non-Enemy Combatant</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/more-than-this.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Patrick Ness</div> 
+                <div style="display: flex; flex-basis: 38.4px;">More Than This</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/hello-i-am-erik.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Erik Spiekermann</div> 
+                <div style="display: flex; flex-basis: 38.4px;">Hello I am Erik</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/the-godfather.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Mario Puzo</div> 
+                <div style="display: flex; flex-basis: 38.4px;">The Godfather</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div style="text-decoration: line-through; color: #00000061;">$15.50</div>
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/the-names.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Don Delillo</div> 
+                <div style="display: flex; flex-basis: 38.4px;">The Names</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/she-beyond-sun.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Daniel Gargallo</div> 
+                <div style="display: flex; flex-basis: 38.4px;">She Beyond Sun</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div style="text-decoration: line-through; color: #00000061;">$15.50</div>
+                    <div>$10.50</div>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+                <div style="padding-top: 24px;"><img src="assets/muscle.png" alt="cover"></div>
+                <div class="details">
+                <div style="color:#00000099;">Alan Trotter</div> 
+                <div style="display: flex; flex-basis: 38.4px;">Muscle</div>
+                <div style="display: flex; padding:30px 0px; gap: 8px;">
+                    <div class="comment">
+                        <div>14</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/chat-bubble-bottom-center.png" alt="comment"></div>
+                    </div>
+                    <div class="comment" id="star">
+                        <div>4.6</div>
+                        <div style="display: flex; justify-content: center;"><img src="assets/star.png" alt="star"></div>
+                        <div>(165)</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: large;">
+                    <div>$22.50</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column; justify-content: end; align-items: center;">
+        <div class="footer" id="socials">
+            <div style="display: flex; margin-right: auto; align-items: center; gap: 10px;"> 
+                <div style="display: flex; align-items: center;"><img src="assets/Logo.png" alt="Logo"></div> 
+                <div style="color: #FFFFFF ;font-weight: bold;">BIG BOOKSHELF</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div><img src="assets/insta.png" alt="ig"></div>
+                <div><img src="assets/fb.png" alt="fb"></div>
+                <div><img src="assets/twitter.png" alt="X"></div>
+            </div>
+        </div>
+        <div class="footer" id="tnc">
+         <div style="display: flex; gap: 10px; color: #FFFFFF; align-items: center; flex-shrink: 1;">   
+            <div>Terms and conditions</div>
+            <div>Privacy policy</div>
+         </div>   
+         <div class="contact">
+            <div>+44 1332 412251</div>
+            <div>support@bookshelf.com</div>
+        </div>   
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .box {
+            border: 1px solid red;
+            min-height: 50px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="display: flex; flex-direction: column; border-color: blue; gap: 16px;"> 
+        <div class="box" style="border-color: red; display: flex; flex-direction: column; gap: 16px;">
+        <div class="box" style="border-color: green; ">
+        </div>
+        <div class="box" style="border-color: green; display: flex; flex-direction: row; flex-flow: row wrap; gap: 16px; justify-content: space-evenly; height: 200px; align-items: baseline;">
+            <div class="box" style="border-color: purple;">Cinta
+            </div>
+            <div class="box" style="border-color: purple;">Irfan
+            </div>
+            <div class="box" style="border-color: purple;">Balqis
+            </div>
+            <div class="box" style="border-color: purple;">Syadid
+            </div>
+            <div class="box" style="border-color: purple;">Adila
+        </div> 
+            </div>
+        <div class="box" style="border-color: green; display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px;">
+            <div class="box" style="border-color: cyan; flex: 1 1 400px;">
+        </div>
+            <div class="box" style="border-color: cyan; display: flex; flex-direction: column; gap: 16px;">
+                <div class="box" style="border-color: orange;">
+                </div>
+                <div class="box" style="border-color: orange;">
+                </div>
+                <div class="box" style="border-color: orange;">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="box" style="border-color: red; display: flex; flex-direction: column;">
+        </div>
+</body>
+</html>
