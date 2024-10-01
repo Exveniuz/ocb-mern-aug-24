@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {}
+
+        .wrapper {}
+
+        #banner {}
+
+        .red {
+            color: red;
+            font-size: 100px;
+        }
+        .blue {
+            color: blue;
+            font-size: 150px;
+        }
+
+        .children {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div></div>
+        <nav></nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="children red" id="banner"></div>
+            <div class="children" id="main-product"></div>
+        </div>
+        <div class="wrapper"></div>
+        <div class="wrapper" id="pricing"></div>
+    </main>
+    <footer>
+        <div id="sitemap"></div>
+        <div id="call-to-action"></div>
+    </footer>
+    <script>
+        // alert("Hello");
+        const nama = prompt("What is your name");
+        
+        // const element = document.querySelector(".wrapper");
+        const element = document.getElementById("banner");
+        console.log( "ID ELEMENT >>>>", element);
+        console.log("NAMA >>>>", nama);
+
+        element.innerText = nama;
+        // element.style.color = "red";
+        // element.style.fontSize = "100px";
+        element.classList.toggle("blue");
+        element.classList.toggle("red");
+
+        const interval = setInterval(() => {
+            element.classList.toggle("blue");
+            element.classList.toggle("red");   
+        }, 1000); 
+
+        // const classElements = document.getElementsByClassName("wrapper");
+        // console.log("CLASS ELEMENTS >>>>", classElements);
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
