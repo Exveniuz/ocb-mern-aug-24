@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {}
+
+        .wrapper {}
+
+        #banner {}
+
+        .red {
+            color: red;
+            font-size: 100px;
+        }
+        .blue {
+            color: blue;
+            font-size: 150px;
+        }
+
+        .children {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div></div>
+        <nav></nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="children red" id="banner">
+                <button id="greeting" onclick="javascript:alert('Hello button')">Inline</button>
+                <button id="greeting" onclick="fungsiSaya()">Function Reference</button>
+                <button id="greeting2">Event based on element query</button>
+            </div>
+        <div class="children" id="main-product"></div>
+        </div>
+        <div class="wrapper">
+            <input type="text" name="kucing" />
+        </div>
+        <div class="wrapper" id="pricing">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+        </div>
+    </main>
+    <footer>
+        <div id="sitemap"></div>
+        <div id="call-to-action"></div>
+    </footer>
+    <script>
+        // Element Query
+        const element = document.getElementById('greeting');
+
+        console.dir(element);
+        console.log(element.spellcheck);
+
+        // Event based on function reference
+        function fungsiSaya() {
+            alert("Hello fungsi");
+        }
+
+        // Event based on element query
+        const element2 = document.getElementById('greeting2');
+        element2.onclick = function () {
+            alert('Hello element query');
+        }
+
+        // Event based on listener
+        const kuicngSaya = document.addEventListener( 'click', function() {
+            console.log("Saya kena click");
+        })
+
+        // Event based on listener of specific element
+        const element3 = document.getElementById("pricing");
+        const hamsterSaya = element3.addEventListener('click', function () {
+            console.log("Hanya element3 yang kena click")
+        })
+
+        
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
