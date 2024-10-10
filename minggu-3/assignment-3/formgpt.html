@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borang Pendaftaran</title>
+  <link rel="stylesheet" href="stylegpt.css">
+</head>
+<body>
+  <form action="process-form-gpt.php" method="POST" class="registration-form">
+    <h2>Borang Pendaftaran</h2>
+    
+    <!-- Input Nama -->
+    <label for="name">Nama:</label>
+    <input type="text" id="name" name="name" placeholder="Masukkan nama anda" required>
+    
+    <!-- Input E-mel -->
+    <label for="email">E-mel:</label>
+    <input type="email" id="email" name="email" placeholder="contoh@mail.com" required>
+    
+    <!-- Input Nombor Telefon -->
+    <label for="phone">Nombor Telefon:</label>
+    <input type="tel" id="phone" name="phone" placeholder="012-3456789" pattern="[0-9]{3}-[0-9]{7}" required>
+    
+    <!-- Input Umur -->
+    <label for="age">Umur:</label>
+    <input type="number" id="age" name="age" min="18" max="100" placeholder="Umur anda" required>
+    
+    <!-- Pilihan Jantina -->
+    <label>Jantina:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Lelaki</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Perempuan</label>
+    
+    <!-- Kotak Pilihan Syarat -->
+    <label for="terms">
+      <input type="checkbox" id="terms" name="terms" required>
+      Saya bersetuju dengan syarat dan peraturan
+    </label>
+    
+    <!-- Butang Hantar -->
+    <button type="submit">Hantar</button>
+  </form>
+
+  <script src="form-validation.js"></script>
+</body>
+</html>

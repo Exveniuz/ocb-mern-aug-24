@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugasan: Borang (Form)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <form method="post" action="index.html">
+        <h1>BORANG PENDAFTARAN</h1>
+        <!-- Input nama -->
+        <div class="ruang">
+            <label for="nama">Nama: </label>
+            <input class="field" name="nama" type="text" placeholder="Ahmad Ali" required>
+        </div>
+        <!-- Input umur -->
+        <div class="ruang">
+            <label for="umur">Umur: </label>
+            <input class="field" name="umur" type="number" min="18" max="60" required placeholder="00">
+        </div>
+        <!-- Input e-mail -->
+        <div class="ruang">
+            <label for="email">E-mail: </label>
+            <input class="field" name="email" type="email" placeholder="ahmad@ali.com" required>
+        </div>
+        <!-- Input no. telefon -->
+        <div class="ruang">
+            <label for="tel">No. Telefon: </label>
+            <input class="field" name="tel" type="tel" pattern="[0-9]{3}-[0-9]{7-8}" placeholder="012-3456789" required>
+        </div>
+        <!-- Pilihan jantina -->
+        <div class="jantina">
+            <label for="jantina">Jantina: </label>
+            <input name="jantina" type="radio" value="Lelaki" required>
+            <label for="lelaki">Lelaki</label>
+            <input name="jantina" type="radio" value="Perempuan" required>
+            <label for="perempuan">Perempuan</label>
+        </div>
+        <!-- Kotak pilihan syarat -->
+        <div class="setuju">
+            <input type="checkbox" name="setuju" required>
+            <label for="setuju">Saya setuju dengan setiap syarat dan peraturan.</label>
+        </div>
+        <!-- Butang hantar -->
+        <button type="submit">Hantar</button>
+    </form>
 </body>
 </html>
