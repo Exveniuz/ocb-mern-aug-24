@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Todo List
+    <div id="app"></div>
+</body>
+<script>
+    fetch('https://jsonplaceholder.typicode.com/todos/')
+    .then(response => response.json())
+    .then(body => {
+        const todolist = body.map((todo) => (
+            `<li> ${todo.title} ${todo.completed ? '✅' : '❌'} </li>`
+        ))
+        
+        return todolist
+    })
+    .then(todolist => {
+        document.getElementById('app').innerHTML = todolist
+    })
+    .catch(err => {debugger})
+</script>
+</html>
